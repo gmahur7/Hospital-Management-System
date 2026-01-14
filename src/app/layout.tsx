@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { fontVariables } from "@/lib/fonts";
+// import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+// import { AppSidebar } from "@/components/features/SideBar/app-sidebar";
+// import Header from "@/components/global/Header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,6 +32,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          {/* <SidebarProvider key="app-sidebar">
+            <AppSidebar />
+            <SidebarInset>
+              <Header />
+              {children}
+            </SidebarInset>
+          </SidebarProvider> */}
           {children}
         </ThemeProvider>
       </body>
